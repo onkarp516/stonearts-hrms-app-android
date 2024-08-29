@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/tv_today_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Start Break"
+        android:textStyle="bold"
+        android:textColor="#7c3694"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/baseline_close_24"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_select_break"
+        android:layout_below="@+id/tv_today_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Break Type"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#7c3694"
+        android:textSize="16sp"/>
+
+    <!--<AutoCompleteTextView
+        android:id="@+id/av_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tv_select_break"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:hint="Select"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="15dp" />-->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edt_machine_name_task"
+        android:layout_below="@+id/tv_select_break"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:boxStrokeColor="#00000000"
+        app:boxStrokeWidth="0dp"
+        app:hintTextColor="#00000000">
+        <AutoCompleteTextView
+            android:id="@+id/av_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:backgroundTint="@color/black"
+            android:textColor="#050505"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/v1"
+        android:layout_below="@+id/edt_machine_name_task"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"/>
+    <TextView
+        android:id="@+id/tv_remark"
+        android:layout_below="@+id/v1"
+        android:layout_marginLeft="20dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remark"/>
+<EditText
+    android:id="@+id/edt_remark"
+    android:layout_below="@+id/tv_remark"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxLines="3"
+    android:minLines="3"
+    android:paddingLeft="10dp"
+    android:paddingTop="4dp"
+    android:gravity="top"
+    android:background="@drawable/edit_text_bg"/>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_below="@+id/edt_remark"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_marginBottom="20dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/manage_profile"
+            android:text="Submit"
+            android:layout_marginRight="5dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Close"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/manage_profile"
+            android:text="Close"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

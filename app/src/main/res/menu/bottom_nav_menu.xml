@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/home"
+        android:enabled="true"
+        app:showAsAction="withText"
+        android:title="@string/title_home" />
+    <item
+        android:id="@+id/navigation_teamattendance"
+        android:icon="@drawable/team"
+        android:enabled="true"
+        app:showAsAction="withText"
+        android:title="@string/team" />
+    <item
+        android:id="@+id/navigation_attendance"
+        android:icon="@drawable/calendar"
+        android:enabled="true"
+        app:showAsAction="withText"
+        android:title="@string/title_attendance" />
+    <item
+        android:id="@+id/navigation_break"
+        android:icon="@drawable/snooze"
+        android:enabled="true"
+        app:showAsAction="withText"
+        android:title="@string/title_break" />
+    <item
+        android:id="@+id/navigation_more"
+        android:icon="@drawable/more"
+        android:enabled="true"
+        app:showAsAction="withText"
+        android:title="@string/title_more" />
+</menu>

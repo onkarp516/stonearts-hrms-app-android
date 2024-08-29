@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="280dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/leave_status_bg">
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/leave_status_bg_2"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#8bc0f8"
+            android:text="Emergency Leave"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:background="#cfd1e2"/>
+        <RelativeLayout
+            android:id="@+id/rl_hrms"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:background="@drawable/light_blue_boarder"
+            android:padding="10dp">
+            <ImageView
+                android:id="@+id/iv_hrms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/about_hrms"/>
+            <TextView
+                android:id="@+id/tv_hrms"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50dp"
+                android:layout_height="wrap_content"
+                android:textColor="#7c3694"
+                android:text="About HRMS "/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/forword"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </LinearLayout>-->
+    <RelativeLayout
+        android:id="@+id/rl_leave_type"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/leave_status_bg_2">
+
+        <LinearLayout
+            android:id="@+id/leave_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Emergency Leave"
+                android:textColor="#4b8cb2"
+                android:textSize="14dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#cfd1e2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="From"
+                android:textColor="#4b8cb2"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="DD/MM/YYYY"
+                android:textColor="#b5b5b5"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="To"
+                android:textColor="#4b8cb2"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="DD/MM/YYYY"
+                android:textColor="#b5b5b5"
+                android:textSize="12dp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rl_reason"
+            android:layout_below="@+id/leave_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- TextView with Reason -->
+
+            <!-- EditText with Medical Reason -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:hint="Medical Reason"
+                android:textColorHint="#2d79a5"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal|center_vertical|start"
+                android:background="@drawable/light_blue_boarder"
+                android:layout_marginHorizontal="15dp"
+                /> <!-- Adjust the translationY as needed -->
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:textColor="#6eb0f6"
+            android:text="Reason" />
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/specify_the_reason"
+            android:layout_below="@+id/rl_reason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- TextView with Reason -->
+
+            <!-- EditText with Medical Reason -->
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:hint="Specify The Reason"
+                android:textColorHint="#2d79a5"
+                android:textSize="12sp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal|center_vertical|start"
+                android:background="@drawable/light_blue_boarder"
+                android:layout_marginHorizontal="15dp"
+                /> <!-- Adjust the translationY as needed -->
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_specify_the_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="110dp"
+            android:textColor="#6eb0f6"
+            android:text="Specify The Reason" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_lebal"
+        android:layout_below="@+id/rl_leave_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/approved_120"/>
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:layout_below="@+id/iv_lebal"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="on 18/06/2023"/>
+        <TextView
+            android:id="@+id/approved_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="-By MR. Akshay Chavan"/>
+    </RelativeLayout>
+</RelativeLayout>

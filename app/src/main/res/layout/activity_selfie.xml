@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Selfie_Activity">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back_map"/>
+    <TextView
+        android:id="@+id/tv_selfie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selfie Screen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"/>
+
+    <ScrollView
+        android:layout_below="@+id/iv_back"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_selfie"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_bg"
+        android:layout_below="@+id/iv_selfie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/tv_map_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:text="Please wait finding your location"/>
+        <TextView
+            android:id="@+id/tv_map_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            android:singleLine="true"
+            android:text="Please wait calculating distance"/>
+    </LinearLayout>
+    </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_reset_selfie"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/manage_profile"
+            android:text="Reset"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_take_selfie"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/manage_profile"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

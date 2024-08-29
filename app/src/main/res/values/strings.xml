@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">hrmsapp</string>
+    <string name="title_home">Home</string>
+    <string name="title_attendance">Attendance</string>
+    <string name="team">Team</string>
+    <string name="title_break">Break</string>
+    <string name="title_more">More</string>
+    <string name="aboutUs">
+    Welcome to our HRMS App – your all-in-one
+ solution for efficient Human Resource
+management. Streamline employee
+information, leave, attendance, performance,
+recruitment, training, and payroll processes.
+ Boost productivity, transparency, and employee
+satisfaction with our user-friendly platform.
+Simplify HR tasks, empower your workforce,
+ and drive organizational success.
+Welcome to the future of HR management!
+</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_3"
+    tools:context=".Activity.Leave_Status_Activity">
+    <RelativeLayout
+        android:id="@+id/rl_top_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/arrow_back" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="#1e709e"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"
+            android:text="Leaves Status"/>
+        <ImageView
+            android:id="@+id/iv_notification"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/notification_icon"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_of_leave"
+            android:layout_below="@+id/rl_top_nav"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>

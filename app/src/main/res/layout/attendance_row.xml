@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_today_punch_dt1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:id="@+id/ll_day_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monday"
+            android:textSize="12sp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="#0F6698"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_checkIn_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="dd/mm/yyyy"
+            android:textSize="16sp"
+            android:textColor="#0F6698"
+            android:fontFamily="@font/lato_regular"
+            android:layout_marginTop="5dp"
+            android:paddingStart="8dp"
+            android:paddingBottom="4dp"/>
+    </LinearLayout>
+
+    <!-- Vertical Separator Line -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#D8C2FF"/>
+
+    <!-- Right side: Time In and Time Out -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_checkIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="09:00 AM"
+            android:textSize="12sp"
+            android:paddingStart="8dp"
+            android:textColor="#0F6698"
+            android:fontFamily="@font/lato_regular"
+            android:paddingTop="4dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_checkOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="05:00 PM"
+            android:textSize="12sp"
+            android:textColor="#0F6698"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/lato_regular"
+            android:paddingStart="8dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"/>
+    </LinearLayout>
+   <!-- <View
+        android:layout_below="@+id/ll_day_date"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#f2f2f2"/>-->
+</LinearLayout>

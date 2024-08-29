@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_3"
+    tools:context=".Activity.Salary_Slip_Activity">
+    <!--    Top Nav Bar-->
+
+    <RelativeLayout
+        android:id="@+id/rl_top_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Salary Slip"
+            android:textColor="#1e709e"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/iv_notification"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/notification_icon"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/rl_top_nav"
+        android:id="@+id/rl_top_nav1_calender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+        <ImageView
+            android:id="@+id/calender"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/calendar1" />
+
+        <TextView
+            android:id="@+id/tv_site_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Month: December"
+            android:textColor="#1e709e"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/dropdown_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/frame" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sal_info"
+        android:layout_below="@+id/rl_top_nav1_calender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <LinearLayout
+            android:id="@+id/ll_month"
+            android:layout_below="@+id/tv_mainHeader"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/layout_salary_bg"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_below="@+id/v1"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Month"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:textColor="#64ABF5"/>
+
+            <TextView
+                android:id="@+id/tv_current_month"
+                android:layout_below="@+id/ll_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MMM YYYY"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:textColor="#7C3694"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_net_salary"
+            android:layout_below="@+id/tv_mainHeader"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/layout_salary_bg"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Net Salary"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:textColor="#64ABF5"/>
+
+            <TextView
+                android:id="@+id/tv_net_salary"
+                android:layout_below="@+id/ll_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 INR"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:textColor="#7C3694"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/ll_sal_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_particular_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Particulars :"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="#0F6698"/>
+        <TextView
+            android:id="@+id/tv_earning_label"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Earnings( in INR)"
+            android:layout_marginTop="25dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="#0F6698"/>
+
+
+        <TextView
+            android:id="@+id/tv_ctc_label"
+            android:layout_below="@+id/tv_particular_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CTC"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_ctc"
+            android:layout_below="@+id/tv_earning_label"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+        <View
+            android:id="@+id/v11"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_ctc"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#5A5959"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_basic_label"
+            android:layout_below="@+id/v11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Basic Salary"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5" />
+
+        <TextView
+            android:id="@+id/tv_basic"
+            android:layout_below="@+id/v11"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5"/>
+
+        <View
+            android:id="@+id/v20"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_basic"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFB9EC"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_overtime_label"
+            android:layout_below="@+id/v20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Overtime"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5" />
+
+        <TextView
+            android:id="@+id/tv_overtime"
+            android:layout_below="@+id/v20"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5"/>
+
+        <View
+            android:id="@+id/v12"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_overtime"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFB9EC"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:visibility="visible"/>
+        <TextView
+            android:id="@+id/tv_pF_label"
+            android:layout_below="@+id/v12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Provident Fund"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5"/>
+
+        <TextView
+            android:id="@+id/tv_pf"
+            android:layout_below="@+id/v12"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5"/>
+        <View
+            android:id="@+id/v13"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_pf"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFB9EC"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:visibility="visible"/>
+        <TextView
+            android:id="@+id/tv_pt_label"
+            android:layout_below="@+id/v13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Professional Tax"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5"/>
+        <TextView
+            android:id="@+id/tv_pt"
+            android:layout_below="@+id/v13"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5"/>
+
+        <View
+            android:id="@+id/v14"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_pt_label"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFB9EC"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_esi_label"
+            android:layout_below="@+id/v14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ESI"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5"/>
+        <TextView
+            android:id="@+id/tv_esi"
+            android:layout_below="@+id/v14"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5"/>
+
+        <View
+            android:id="@+id/v15"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_esi"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFB9EC"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_total_sal_label"
+            android:layout_below="@+id/v16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Salary"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5"/>
+        <TextView
+            android:id="@+id/tv_total_sal"
+            android:layout_below="@+id/v16"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5"/>
+
+        <View
+            android:id="@+id/v16"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/tv_net_sal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DFB9EC"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_net_sal_label"
+            android:layout_below="@+id/v15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Net Salary"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5"/>
+        <TextView
+            android:id="@+id/tv_net_sal"
+            android:layout_below="@+id/v15"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0.00"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            android:layout_gravity="center"
+            android:textColor="#64ABF5"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/dark_blue_boarder"
+    >
+
+
+    <TextView
+        android:id="@+id/tv_today_dt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Attendance"
+        android:textStyle="bold"
+        android:textColor="#396FB6"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_today_punch"
+    android:layout_width="match_parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+    android:orientation="horizontal"
+    android:layout_below="@+id/tv_today_dt"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/ll_day_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Monday"
+            android:textSize="12sp"
+            android:paddingStart="8dp"
+            android:paddingTop="4dp"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="#0F6698"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_checkIn_date_break"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="dd/mm/yyyy"
+            android:textSize="16sp"
+            android:textColor="#99C5FF"
+            android:fontFamily="@font/lato_regular"
+            android:layout_marginTop="5dp"
+            android:paddingStart="8dp"
+            android:paddingBottom="4dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_checkIn_break"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="09:00 AM"
+            android:textSize="12sp"
+            android:paddingStart="8dp"
+            android:textColor="#99C5FF"
+            android:fontFamily="@font/lato_regular"
+            android:paddingTop="4dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tv_checkOut_break"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="05:00 PM"
+            android:textSize="12sp"
+            android:textColor="#99C5FF"
+            android:layout_marginTop="6dp"
+            android:fontFamily="@font/lato_regular"
+            android:paddingStart="8dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="4dp"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/ll_today_punch"
+        android:layout_marginBottom="5dp"
+        android:background="#E9ECFF"/>
+
+    <LinearLayout
+        android:id="@+id/ll_today_break"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/ll_today_punch"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_breakStart_label"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Break Start"
+            android:layout_marginLeft="5dp"
+            android:textColor="#396FB6"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_breakEnd_label"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Break End"
+            android:layout_marginLeft="15dp"
+            android:textColor="#396FB6"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/tv_breakTotal_label"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:gravity="center"
+            android:textColor="#396FB6"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_breakList"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/ll_today_break"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+
+
+
+</RelativeLayout>

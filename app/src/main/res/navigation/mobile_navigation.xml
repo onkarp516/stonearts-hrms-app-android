@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_in_out">
+
+    <fragment
+        android:id="@+id/navigation_in_out"
+        android:name="in.truethic.hrmsapp.Fragment.HomeDashboardFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home_dashboard" />
+
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="in.truethic.hrmsapp.Fragment.AttendanceFragment"
+        android:label="@string/title_attendance"
+        tools:layout="@layout/fragment_attendance" />
+
+    <fragment
+        android:id="@+id/navigation_leaves"
+        android:name="in.truethic.hrmsapp.Fragment.BreakFragment"
+        android:label="@string/title_break"
+        tools:layout="@layout/fragment_break" />
+
+    <fragment
+        android:id="@+id/navigation_salary"
+        android:name="in.truethic.hrmsapp.Fragment.MoreFragment"
+        android:label="@string/title_more"
+        tools:layout="@layout/fragment_more" />
+
+</navigation>

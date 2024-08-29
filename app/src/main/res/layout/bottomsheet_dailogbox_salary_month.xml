@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4EBFE"
+    android:id="@+id/bottomSheetContainer1">
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#E0BAE6">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Month"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="#7C3694"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/cancel"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_header"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="20dp">
+
+        <!--adding a radio button -->
+        <RadioButton
+            android:id="@+id/rb_FirstMonth"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="10dp"
+            android:text="Jaunary 2023"
+            android:textColor="#7C3694"
+            android:buttonTint="@color/white"
+            android:textSize="15sp" />
+
+        <!--adding a radio button -->
+        <RadioButton
+            android:id="@+id/rb_SecondMonth"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="10dp"
+            android:textColor="#7C3694"
+            android:text="February 2023"
+            android:textSize="15sp" />
+
+        <!--adding a radio button -->
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:id="@+id/ll_sample"
+        android:layout_below="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+
+
+
+</RelativeLayout>
